@@ -1,0 +1,6 @@
+proc Swapper(a:qubit, b:qubit, c:qubit, d:qubit) =
+  a,b>>CNot . b>>H .
+  b,c>>CNot . c>>H .
+  c,d>>CNot . d>>H .
+  a-/-(ra) . b-/-(rb) . c-/-(rc) . d-/-(rd) .
+  out![ra, rb, rc, rd]
