@@ -10,7 +10,7 @@ qp.binary_var('x0')
 qp.binary_var('x1')
 qp.maximize(linear=[1, 2], quadratic={(0, 1): 1})
 
-# QAOA with AI optimizer (COBYLA)
+# QAOA with AI optimizer- COBYLA
 backend = Aer.get_backend('statevector_simulator')
 qaoa = QAOA(optimizer='COBYLA', reps=1, quantum_instance=backend)
 
